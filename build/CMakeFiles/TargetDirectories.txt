@@ -1,0 +1,3 @@
+/home/yang/00_Code/Chat/build/CMakeFiles/chat.dir
+/home/yang/00_Code/Chat/build/CMakeFiles/edit_cache.dir
+/home/yang/00_Code/Chat/build/CMakeFiles/rebuild_cache.dir

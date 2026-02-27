@@ -1,0 +1,68 @@
+[
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/Channel.cc.o -c /home/yang/00_Code/Chat/Channel.cc",
+  "file": "/home/yang/00_Code/Chat/Channel.cc",
+  "output": "CMakeFiles/chat.dir/Channel.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/CurrentThread.cc.o -c /home/yang/00_Code/Chat/CurrentThread.cc",
+  "file": "/home/yang/00_Code/Chat/CurrentThread.cc",
+  "output": "CMakeFiles/chat.dir/CurrentThread.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/EPollPoller.cc.o -c /home/yang/00_Code/Chat/EPollPoller.cc",
+  "file": "/home/yang/00_Code/Chat/EPollPoller.cc",
+  "output": "CMakeFiles/chat.dir/EPollPoller.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/EventLoop.cc.o -c /home/yang/00_Code/Chat/EventLoop.cc",
+  "file": "/home/yang/00_Code/Chat/EventLoop.cc",
+  "output": "CMakeFiles/chat.dir/EventLoop.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/InetAddress.cc.o -c /home/yang/00_Code/Chat/InetAddress.cc",
+  "file": "/home/yang/00_Code/Chat/InetAddress.cc",
+  "output": "CMakeFiles/chat.dir/InetAddress.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/Logger.cc.o -c /home/yang/00_Code/Chat/Logger.cc",
+  "file": "/home/yang/00_Code/Chat/Logger.cc",
+  "output": "CMakeFiles/chat.dir/Logger.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/Poller.cc.o -c /home/yang/00_Code/Chat/Poller.cc",
+  "file": "/home/yang/00_Code/Chat/Poller.cc",
+  "output": "CMakeFiles/chat.dir/Poller.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/TcpServer.cc.o -c /home/yang/00_Code/Chat/TcpServer.cc",
+  "file": "/home/yang/00_Code/Chat/TcpServer.cc",
+  "output": "CMakeFiles/chat.dir/TcpServer.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/TimeStamp.cc.o -c /home/yang/00_Code/Chat/TimeStamp.cc",
+  "file": "/home/yang/00_Code/Chat/TimeStamp.cc",
+  "output": "CMakeFiles/chat.dir/TimeStamp.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/muduo_server.cc.o -c /home/yang/00_Code/Chat/muduo_server.cc",
+  "file": "/home/yang/00_Code/Chat/muduo_server.cc",
+  "output": "CMakeFiles/chat.dir/muduo_server.cc.o"
+},
+{
+  "directory": "/home/yang/00_Code/Chat/build",
+  "command": "/usr/bin/g++ -Dchat_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/chat.dir/newDefaultPoller.cc.o -c /home/yang/00_Code/Chat/newDefaultPoller.cc",
+  "file": "/home/yang/00_Code/Chat/newDefaultPoller.cc",
+  "output": "CMakeFiles/chat.dir/newDefaultPoller.cc.o"
+}
+]
