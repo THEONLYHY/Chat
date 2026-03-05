@@ -96,21 +96,20 @@ private:
     
     using ChannelList = std::vector<Channel *>;
 
-    std::atomic_bool looping_;  // 是否正在 loop()
+    std::atomic_bool looping_;  // 原子操作，是否正在 loop()
     std::atomic_bool quit_;     // 是否请求退出 loop
     
     const pid_t threadId_;      // 本 EventLoop 所在的线程 ID
 
-    TimeStamp pollReturnTime_;  // 最近一次 Poller::poll 返回时间
+    TimeStamp pollReturnTime_;  // 最近一次 Poller::poll 返回时间s
     std::unique_ptr<Poller> poller;  // I/O 复用器实现
     
     int wakeupFd_;                      // 用于跨线程唤醒 EventLoop 的 fd
     std::unique_ptr<Channel> wakeupChannel_; // 负责监听 wakeupFd_ 的 Channel
 
     ChannelList activeChannels_;        // 每次 poll 返回的活跃 Channel 列表
-    Channel *currentActiveChannel_;     // 正在处理的 Channel（便于调试）
 
-    std::atomic_bool callingPendingFunctors_; // 是否正在执行 pendingFunctors_
+    std::atomic_bool callingPendingFunctors_; // 标记当前loop是否有需要执行的回调操作
     std::vector<Functor> pendingFunctors_;    // 其它线程投递进来的任务
     std::mutex mutex_;                        // 保护 pendingFunctors_
 };
