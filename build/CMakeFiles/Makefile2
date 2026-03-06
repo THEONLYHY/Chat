@@ -64,6 +64,8 @@ CMAKE_BINARY_DIR = /home/yang/00_Code/Chat/build
 
 # The main recursive "all" target.
 all: CMakeFiles/chat.dir/all
+all: CMakeFiles/test_eventloop.dir/all
+all: CMakeFiles/test_runinloop.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +74,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/chat.dir/clean
+clean: CMakeFiles/test_eventloop.dir/clean
+clean: CMakeFiles/test_runinloop.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +103,58 @@ chat: CMakeFiles/chat.dir/rule
 CMakeFiles/chat.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/clean
 .PHONY : CMakeFiles/chat.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_eventloop.dir
+
+# All Build rule for target.
+CMakeFiles/test_eventloop.dir/all: CMakeFiles/chat.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_eventloop.dir/build.make CMakeFiles/test_eventloop.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_eventloop.dir/build.make CMakeFiles/test_eventloop.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=13,14 "Built target test_eventloop"
+.PHONY : CMakeFiles/test_eventloop.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_eventloop.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/00_Code/Chat/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_eventloop.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/00_Code/Chat/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_eventloop.dir/rule
+
+# Convenience name for target.
+test_eventloop: CMakeFiles/test_eventloop.dir/rule
+.PHONY : test_eventloop
+
+# clean rule for target.
+CMakeFiles/test_eventloop.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_eventloop.dir/build.make CMakeFiles/test_eventloop.dir/clean
+.PHONY : CMakeFiles/test_eventloop.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_runinloop.dir
+
+# All Build rule for target.
+CMakeFiles/test_runinloop.dir/all: CMakeFiles/chat.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runinloop.dir/build.make CMakeFiles/test_runinloop.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runinloop.dir/build.make CMakeFiles/test_runinloop.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=15,16 "Built target test_runinloop"
+.PHONY : CMakeFiles/test_runinloop.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_runinloop.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/00_Code/Chat/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_runinloop.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/00_Code/Chat/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_runinloop.dir/rule
+
+# Convenience name for target.
+test_runinloop: CMakeFiles/test_runinloop.dir/rule
+.PHONY : test_runinloop
+
+# clean rule for target.
+CMakeFiles/test_runinloop.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runinloop.dir/build.make CMakeFiles/test_runinloop.dir/clean
+.PHONY : CMakeFiles/test_runinloop.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

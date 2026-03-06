@@ -1,5 +1,6 @@
 #include "Channel.h"
 #include "Logger.h"
+#include "EventLoop.h"
 
 #include <sys/epoll.h>
 
@@ -8,7 +9,7 @@ const int Channel::kReadEvent = EPOLLIN | EPOLLPRI;
 const int Channel::kWriteEvent = EPOLLOUT;
 
 Channel::Channel(EventLoop *loop, int fd)
-    : loop_(loop), fd_(fd), events_(0), revents_(0), index_(0), tied_(false)
+    : loop_(loop), fd_(fd), events_(0), revents_(0), index_(-1), tied_(false)
 {
 }
 
@@ -25,14 +26,15 @@ void Channel::tie(const std::shared_ptr<void> & obj)
 
 void Channel::update()
 {
-    //add code...
-    //loop->updateChannel(this);
+    // 通过channel所属的EventLoop， 调用poller的相应方法，注册fd的events事件
+    loop_->updateChannel(this);
 }
 
+/// 在Channel所示的EventLoop中，把当前的channel 删掉
 void Channel::remove()
 {
-    //add code...
-    //loop->removeChannel(this);
+    // 
+    loop_->removeChannel(this);
 }
 
 

@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/eventfd.h>
+#include <errno.h>
 
 //防止一个线程创建多个EvetnLoop  thead_local
 __thread EventLoop* t_loopInThisThread = nullptr;
@@ -82,12 +83,101 @@ void EventLoop::loop()
     looping_ = false;
 }
 
-void EventLoop:handleRead()
+// 退出事件循环
+// 1. loop在自己线程中调用 ，设置quit_ = true
+// 2. 在其他线程中调用，发送wakeupFd_，唤醒loop所在线程，执行loop中的wakeupChannel_->handleEvent(pollReturnTime_);
+void EventLoop::quit()
+{
+    quit_ = true;
+    if(!isInLoopThread())
+    {
+        wakeup();
+    }
+}
+
+
+void EventLoop::runInLoop(Functor cb)
+{
+    if (isInLoopThread()) // 在当前线程中，直接执行回调
+    {
+        cb();
+    }
+    else // 在其他线程中，将回调加入到队列中，唤醒loop所在线程执行回调
+    {
+        queueInLoop(cb);
+    }
+}
+
+void EventLoop::queueInLoop(Functor cb)
+{
+    {
+        std::unique_lock<std::mutex> lock(mutex_);
+        pendingFunctors_.emplace_back(std::move(cb));
+    }
+    /**
+     1.别的线程投递：必须唤醒，否则 loop 可能睡到超时。
+     2.正在执行 pending functors 时又有新任务入队：也唤醒，避免新任务被拖到很久以后才处理。
+    */
+    if (!isInLoopThread() || callingPendingFunctors_)
+    {
+        wakeup();
+    }
+}
+
+// 唤醒loop所在线程，执行回调
+void EventLoop::wakeup()
 {
     uint64_t one = 1;
-    ssize_t n = read(wakeupFd_, &one, sizeof one);
+    ssize_t n = ::write(wakeupFd_, &one, sizeof one);
+    if (n != sizeof one)
+    {
+        LOG_ERROR("EventLoop::wakeup() writes %d bytes instead of 8", n);
+    }
+}
+
+/// 更新某个 Channel 在 Poller 中关注的事件
+void EventLoop::updateChannel(Channel * channel)
+{
+    poller->updateChannel(channel);
+}
+
+/// 从 Poller 中移除某个 Channel
+void EventLoop::removeChannel(Channel * channel)
+{
+    poller->removeChannel(channel);
+}
+
+/// 当前 Poller 是否持有该 Channel
+bool EventLoop::hasChannel(Channel * channel)
+{
+    return poller->hasChannel(channel);
+}
+
+void EventLoop::handleRead()
+{
+    uint64_t one = 1;
+    ssize_t n = ::read(wakeupFd_, &one, sizeof one);
     if (n != sizeof one)
     {
         LOG_ERROR("EventLoop::handleRead() reads %d bytes instead of 8", n);
     }
+}
+
+/// 执行 pendingFunctors_ 中的所有回调
+void EventLoop::doPendingFunctors()
+{
+    std::vector<Functor> functors;
+    callingPendingFunctors_ = true;
+
+    {
+        std::unique_lock<std::mutex> lock(mutex_);
+        functors.swap(pendingFunctors_);
+    }
+
+    for (const Functor &functor : functors)
+    {
+        functor();
+    }
+    callingPendingFunctors_ = false;
+
 }

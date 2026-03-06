@@ -129,6 +129,32 @@ chat/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/build
 .PHONY : chat/fast
 
+#=============================================================================
+# Target rules for targets named test_eventloop
+
+# Build rule for target.
+test_eventloop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_eventloop
+.PHONY : test_eventloop
+
+# fast build rule for target.
+test_eventloop/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_eventloop.dir/build.make CMakeFiles/test_eventloop.dir/build
+.PHONY : test_eventloop/fast
+
+#=============================================================================
+# Target rules for targets named test_runinloop
+
+# Build rule for target.
+test_runinloop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_runinloop
+.PHONY : test_runinloop
+
+# fast build rule for target.
+test_runinloop/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runinloop.dir/build.make CMakeFiles/test_runinloop.dir/build
+.PHONY : test_runinloop/fast
+
 Channel.o: Channel.cc.o
 .PHONY : Channel.o
 
@@ -345,6 +371,54 @@ TimeStamp.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/TimeStamp.cc.s
 .PHONY : TimeStamp.cc.s
 
+examples/test_eventloop.o: examples/test_eventloop.cc.o
+.PHONY : examples/test_eventloop.o
+
+# target to build an object file
+examples/test_eventloop.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_eventloop.dir/build.make CMakeFiles/test_eventloop.dir/examples/test_eventloop.cc.o
+.PHONY : examples/test_eventloop.cc.o
+
+examples/test_eventloop.i: examples/test_eventloop.cc.i
+.PHONY : examples/test_eventloop.i
+
+# target to preprocess a source file
+examples/test_eventloop.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_eventloop.dir/build.make CMakeFiles/test_eventloop.dir/examples/test_eventloop.cc.i
+.PHONY : examples/test_eventloop.cc.i
+
+examples/test_eventloop.s: examples/test_eventloop.cc.s
+.PHONY : examples/test_eventloop.s
+
+# target to generate assembly for a file
+examples/test_eventloop.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_eventloop.dir/build.make CMakeFiles/test_eventloop.dir/examples/test_eventloop.cc.s
+.PHONY : examples/test_eventloop.cc.s
+
+examples/test_runinloop.o: examples/test_runinloop.cc.o
+.PHONY : examples/test_runinloop.o
+
+# target to build an object file
+examples/test_runinloop.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runinloop.dir/build.make CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o
+.PHONY : examples/test_runinloop.cc.o
+
+examples/test_runinloop.i: examples/test_runinloop.cc.i
+.PHONY : examples/test_runinloop.i
+
+# target to preprocess a source file
+examples/test_runinloop.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runinloop.dir/build.make CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.i
+.PHONY : examples/test_runinloop.cc.i
+
+examples/test_runinloop.s: examples/test_runinloop.cc.s
+.PHONY : examples/test_runinloop.s
+
+# target to generate assembly for a file
+examples/test_runinloop.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runinloop.dir/build.make CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.s
+.PHONY : examples/test_runinloop.cc.s
+
 muduo_server.o: muduo_server.cc.o
 .PHONY : muduo_server.o
 
@@ -402,6 +476,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... chat"
+	@echo "... test_eventloop"
+	@echo "... test_runinloop"
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
@@ -429,6 +505,12 @@ help:
 	@echo "... TimeStamp.o"
 	@echo "... TimeStamp.i"
 	@echo "... TimeStamp.s"
+	@echo "... examples/test_eventloop.o"
+	@echo "... examples/test_eventloop.i"
+	@echo "... examples/test_eventloop.s"
+	@echo "... examples/test_runinloop.o"
+	@echo "... examples/test_runinloop.i"
+	@echo "... examples/test_runinloop.s"
 	@echo "... muduo_server.o"
 	@echo "... muduo_server.i"
 	@echo "... muduo_server.s"

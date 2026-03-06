@@ -73,155 +73,155 @@ CMakeFiles/chat.dir/Channel.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/Channel.cc.o: /home/yang/00_Code/Chat/Channel.cc
 CMakeFiles/chat.dir/Channel.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chat.dir/Channel.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/Channel.cc.o -MF CMakeFiles/chat.dir/Channel.cc.o.d -o CMakeFiles/chat.dir/Channel.cc.o -c /home/yang/00_Code/Chat/Channel.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/Channel.cc.o -MF CMakeFiles/chat.dir/Channel.cc.o.d -o CMakeFiles/chat.dir/Channel.cc.o -c /home/yang/00_Code/Chat/Channel.cc
 
 CMakeFiles/chat.dir/Channel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/Channel.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/Channel.cc > CMakeFiles/chat.dir/Channel.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/Channel.cc > CMakeFiles/chat.dir/Channel.cc.i
 
 CMakeFiles/chat.dir/Channel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/Channel.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/Channel.cc -o CMakeFiles/chat.dir/Channel.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/Channel.cc -o CMakeFiles/chat.dir/Channel.cc.s
 
 CMakeFiles/chat.dir/CurrentThread.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/CurrentThread.cc.o: /home/yang/00_Code/Chat/CurrentThread.cc
 CMakeFiles/chat.dir/CurrentThread.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chat.dir/CurrentThread.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/CurrentThread.cc.o -MF CMakeFiles/chat.dir/CurrentThread.cc.o.d -o CMakeFiles/chat.dir/CurrentThread.cc.o -c /home/yang/00_Code/Chat/CurrentThread.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/CurrentThread.cc.o -MF CMakeFiles/chat.dir/CurrentThread.cc.o.d -o CMakeFiles/chat.dir/CurrentThread.cc.o -c /home/yang/00_Code/Chat/CurrentThread.cc
 
 CMakeFiles/chat.dir/CurrentThread.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/CurrentThread.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/CurrentThread.cc > CMakeFiles/chat.dir/CurrentThread.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/CurrentThread.cc > CMakeFiles/chat.dir/CurrentThread.cc.i
 
 CMakeFiles/chat.dir/CurrentThread.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/CurrentThread.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/CurrentThread.cc -o CMakeFiles/chat.dir/CurrentThread.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/CurrentThread.cc -o CMakeFiles/chat.dir/CurrentThread.cc.s
 
 CMakeFiles/chat.dir/EPollPoller.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/EPollPoller.cc.o: /home/yang/00_Code/Chat/EPollPoller.cc
 CMakeFiles/chat.dir/EPollPoller.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chat.dir/EPollPoller.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/EPollPoller.cc.o -MF CMakeFiles/chat.dir/EPollPoller.cc.o.d -o CMakeFiles/chat.dir/EPollPoller.cc.o -c /home/yang/00_Code/Chat/EPollPoller.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/EPollPoller.cc.o -MF CMakeFiles/chat.dir/EPollPoller.cc.o.d -o CMakeFiles/chat.dir/EPollPoller.cc.o -c /home/yang/00_Code/Chat/EPollPoller.cc
 
 CMakeFiles/chat.dir/EPollPoller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/EPollPoller.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/EPollPoller.cc > CMakeFiles/chat.dir/EPollPoller.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/EPollPoller.cc > CMakeFiles/chat.dir/EPollPoller.cc.i
 
 CMakeFiles/chat.dir/EPollPoller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/EPollPoller.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/EPollPoller.cc -o CMakeFiles/chat.dir/EPollPoller.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/EPollPoller.cc -o CMakeFiles/chat.dir/EPollPoller.cc.s
 
 CMakeFiles/chat.dir/EventLoop.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/EventLoop.cc.o: /home/yang/00_Code/Chat/EventLoop.cc
 CMakeFiles/chat.dir/EventLoop.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chat.dir/EventLoop.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/EventLoop.cc.o -MF CMakeFiles/chat.dir/EventLoop.cc.o.d -o CMakeFiles/chat.dir/EventLoop.cc.o -c /home/yang/00_Code/Chat/EventLoop.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/EventLoop.cc.o -MF CMakeFiles/chat.dir/EventLoop.cc.o.d -o CMakeFiles/chat.dir/EventLoop.cc.o -c /home/yang/00_Code/Chat/EventLoop.cc
 
 CMakeFiles/chat.dir/EventLoop.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/EventLoop.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/EventLoop.cc > CMakeFiles/chat.dir/EventLoop.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/EventLoop.cc > CMakeFiles/chat.dir/EventLoop.cc.i
 
 CMakeFiles/chat.dir/EventLoop.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/EventLoop.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/EventLoop.cc -o CMakeFiles/chat.dir/EventLoop.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/EventLoop.cc -o CMakeFiles/chat.dir/EventLoop.cc.s
 
 CMakeFiles/chat.dir/InetAddress.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/InetAddress.cc.o: /home/yang/00_Code/Chat/InetAddress.cc
 CMakeFiles/chat.dir/InetAddress.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/chat.dir/InetAddress.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/InetAddress.cc.o -MF CMakeFiles/chat.dir/InetAddress.cc.o.d -o CMakeFiles/chat.dir/InetAddress.cc.o -c /home/yang/00_Code/Chat/InetAddress.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/InetAddress.cc.o -MF CMakeFiles/chat.dir/InetAddress.cc.o.d -o CMakeFiles/chat.dir/InetAddress.cc.o -c /home/yang/00_Code/Chat/InetAddress.cc
 
 CMakeFiles/chat.dir/InetAddress.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/InetAddress.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/InetAddress.cc > CMakeFiles/chat.dir/InetAddress.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/InetAddress.cc > CMakeFiles/chat.dir/InetAddress.cc.i
 
 CMakeFiles/chat.dir/InetAddress.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/InetAddress.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/InetAddress.cc -o CMakeFiles/chat.dir/InetAddress.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/InetAddress.cc -o CMakeFiles/chat.dir/InetAddress.cc.s
 
 CMakeFiles/chat.dir/Logger.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/Logger.cc.o: /home/yang/00_Code/Chat/Logger.cc
 CMakeFiles/chat.dir/Logger.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/chat.dir/Logger.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/Logger.cc.o -MF CMakeFiles/chat.dir/Logger.cc.o.d -o CMakeFiles/chat.dir/Logger.cc.o -c /home/yang/00_Code/Chat/Logger.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/Logger.cc.o -MF CMakeFiles/chat.dir/Logger.cc.o.d -o CMakeFiles/chat.dir/Logger.cc.o -c /home/yang/00_Code/Chat/Logger.cc
 
 CMakeFiles/chat.dir/Logger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/Logger.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/Logger.cc > CMakeFiles/chat.dir/Logger.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/Logger.cc > CMakeFiles/chat.dir/Logger.cc.i
 
 CMakeFiles/chat.dir/Logger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/Logger.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/Logger.cc -o CMakeFiles/chat.dir/Logger.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/Logger.cc -o CMakeFiles/chat.dir/Logger.cc.s
 
 CMakeFiles/chat.dir/Poller.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/Poller.cc.o: /home/yang/00_Code/Chat/Poller.cc
 CMakeFiles/chat.dir/Poller.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chat.dir/Poller.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/Poller.cc.o -MF CMakeFiles/chat.dir/Poller.cc.o.d -o CMakeFiles/chat.dir/Poller.cc.o -c /home/yang/00_Code/Chat/Poller.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/Poller.cc.o -MF CMakeFiles/chat.dir/Poller.cc.o.d -o CMakeFiles/chat.dir/Poller.cc.o -c /home/yang/00_Code/Chat/Poller.cc
 
 CMakeFiles/chat.dir/Poller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/Poller.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/Poller.cc > CMakeFiles/chat.dir/Poller.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/Poller.cc > CMakeFiles/chat.dir/Poller.cc.i
 
 CMakeFiles/chat.dir/Poller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/Poller.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/Poller.cc -o CMakeFiles/chat.dir/Poller.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/Poller.cc -o CMakeFiles/chat.dir/Poller.cc.s
 
 CMakeFiles/chat.dir/TcpServer.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/TcpServer.cc.o: /home/yang/00_Code/Chat/TcpServer.cc
 CMakeFiles/chat.dir/TcpServer.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/chat.dir/TcpServer.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/TcpServer.cc.o -MF CMakeFiles/chat.dir/TcpServer.cc.o.d -o CMakeFiles/chat.dir/TcpServer.cc.o -c /home/yang/00_Code/Chat/TcpServer.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/TcpServer.cc.o -MF CMakeFiles/chat.dir/TcpServer.cc.o.d -o CMakeFiles/chat.dir/TcpServer.cc.o -c /home/yang/00_Code/Chat/TcpServer.cc
 
 CMakeFiles/chat.dir/TcpServer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/TcpServer.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/TcpServer.cc > CMakeFiles/chat.dir/TcpServer.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/TcpServer.cc > CMakeFiles/chat.dir/TcpServer.cc.i
 
 CMakeFiles/chat.dir/TcpServer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/TcpServer.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/TcpServer.cc -o CMakeFiles/chat.dir/TcpServer.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/TcpServer.cc -o CMakeFiles/chat.dir/TcpServer.cc.s
 
 CMakeFiles/chat.dir/TimeStamp.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/TimeStamp.cc.o: /home/yang/00_Code/Chat/TimeStamp.cc
 CMakeFiles/chat.dir/TimeStamp.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/chat.dir/TimeStamp.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/TimeStamp.cc.o -MF CMakeFiles/chat.dir/TimeStamp.cc.o.d -o CMakeFiles/chat.dir/TimeStamp.cc.o -c /home/yang/00_Code/Chat/TimeStamp.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/TimeStamp.cc.o -MF CMakeFiles/chat.dir/TimeStamp.cc.o.d -o CMakeFiles/chat.dir/TimeStamp.cc.o -c /home/yang/00_Code/Chat/TimeStamp.cc
 
 CMakeFiles/chat.dir/TimeStamp.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/TimeStamp.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/TimeStamp.cc > CMakeFiles/chat.dir/TimeStamp.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/TimeStamp.cc > CMakeFiles/chat.dir/TimeStamp.cc.i
 
 CMakeFiles/chat.dir/TimeStamp.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/TimeStamp.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/TimeStamp.cc -o CMakeFiles/chat.dir/TimeStamp.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/TimeStamp.cc -o CMakeFiles/chat.dir/TimeStamp.cc.s
 
 CMakeFiles/chat.dir/muduo_server.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/muduo_server.cc.o: /home/yang/00_Code/Chat/muduo_server.cc
 CMakeFiles/chat.dir/muduo_server.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/chat.dir/muduo_server.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/muduo_server.cc.o -MF CMakeFiles/chat.dir/muduo_server.cc.o.d -o CMakeFiles/chat.dir/muduo_server.cc.o -c /home/yang/00_Code/Chat/muduo_server.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/muduo_server.cc.o -MF CMakeFiles/chat.dir/muduo_server.cc.o.d -o CMakeFiles/chat.dir/muduo_server.cc.o -c /home/yang/00_Code/Chat/muduo_server.cc
 
 CMakeFiles/chat.dir/muduo_server.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/muduo_server.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/muduo_server.cc > CMakeFiles/chat.dir/muduo_server.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/muduo_server.cc > CMakeFiles/chat.dir/muduo_server.cc.i
 
 CMakeFiles/chat.dir/muduo_server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/muduo_server.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/muduo_server.cc -o CMakeFiles/chat.dir/muduo_server.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/muduo_server.cc -o CMakeFiles/chat.dir/muduo_server.cc.s
 
 CMakeFiles/chat.dir/newDefaultPoller.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/newDefaultPoller.cc.o: /home/yang/00_Code/Chat/newDefaultPoller.cc
 CMakeFiles/chat.dir/newDefaultPoller.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/chat.dir/newDefaultPoller.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/newDefaultPoller.cc.o -MF CMakeFiles/chat.dir/newDefaultPoller.cc.o.d -o CMakeFiles/chat.dir/newDefaultPoller.cc.o -c /home/yang/00_Code/Chat/newDefaultPoller.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/newDefaultPoller.cc.o -MF CMakeFiles/chat.dir/newDefaultPoller.cc.o.d -o CMakeFiles/chat.dir/newDefaultPoller.cc.o -c /home/yang/00_Code/Chat/newDefaultPoller.cc
 
 CMakeFiles/chat.dir/newDefaultPoller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/newDefaultPoller.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/newDefaultPoller.cc > CMakeFiles/chat.dir/newDefaultPoller.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/newDefaultPoller.cc > CMakeFiles/chat.dir/newDefaultPoller.cc.i
 
 CMakeFiles/chat.dir/newDefaultPoller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/newDefaultPoller.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/newDefaultPoller.cc -o CMakeFiles/chat.dir/newDefaultPoller.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/newDefaultPoller.cc -o CMakeFiles/chat.dir/newDefaultPoller.cc.s
 
 # Object files for target chat
 chat_OBJECTS = \
