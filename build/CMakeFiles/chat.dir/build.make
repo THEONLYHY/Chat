@@ -181,10 +181,24 @@ CMakeFiles/chat.dir/TcpServer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/TcpServer.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/TcpServer.cc -o CMakeFiles/chat.dir/TcpServer.cc.s
 
+CMakeFiles/chat.dir/Thread.cc.o: CMakeFiles/chat.dir/flags.make
+CMakeFiles/chat.dir/Thread.cc.o: /home/yang/00_Code/Chat/Thread.cc
+CMakeFiles/chat.dir/Thread.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/chat.dir/Thread.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/Thread.cc.o -MF CMakeFiles/chat.dir/Thread.cc.o.d -o CMakeFiles/chat.dir/Thread.cc.o -c /home/yang/00_Code/Chat/Thread.cc
+
+CMakeFiles/chat.dir/Thread.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/Thread.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/Thread.cc > CMakeFiles/chat.dir/Thread.cc.i
+
+CMakeFiles/chat.dir/Thread.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/Thread.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/Thread.cc -o CMakeFiles/chat.dir/Thread.cc.s
+
 CMakeFiles/chat.dir/TimeStamp.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/TimeStamp.cc.o: /home/yang/00_Code/Chat/TimeStamp.cc
 CMakeFiles/chat.dir/TimeStamp.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/chat.dir/TimeStamp.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/chat.dir/TimeStamp.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/TimeStamp.cc.o -MF CMakeFiles/chat.dir/TimeStamp.cc.o.d -o CMakeFiles/chat.dir/TimeStamp.cc.o -c /home/yang/00_Code/Chat/TimeStamp.cc
 
 CMakeFiles/chat.dir/TimeStamp.cc.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/chat.dir/TimeStamp.cc.s: cmake_force
 CMakeFiles/chat.dir/muduo_server.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/muduo_server.cc.o: /home/yang/00_Code/Chat/muduo_server.cc
 CMakeFiles/chat.dir/muduo_server.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/chat.dir/muduo_server.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/chat.dir/muduo_server.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/muduo_server.cc.o -MF CMakeFiles/chat.dir/muduo_server.cc.o.d -o CMakeFiles/chat.dir/muduo_server.cc.o -c /home/yang/00_Code/Chat/muduo_server.cc
 
 CMakeFiles/chat.dir/muduo_server.cc.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/chat.dir/muduo_server.cc.s: cmake_force
 CMakeFiles/chat.dir/newDefaultPoller.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/newDefaultPoller.cc.o: /home/yang/00_Code/Chat/newDefaultPoller.cc
 CMakeFiles/chat.dir/newDefaultPoller.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/chat.dir/newDefaultPoller.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/chat.dir/newDefaultPoller.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/newDefaultPoller.cc.o -MF CMakeFiles/chat.dir/newDefaultPoller.cc.o.d -o CMakeFiles/chat.dir/newDefaultPoller.cc.o -c /home/yang/00_Code/Chat/newDefaultPoller.cc
 
 CMakeFiles/chat.dir/newDefaultPoller.cc.i: cmake_force
@@ -233,6 +247,7 @@ chat_OBJECTS = \
 "CMakeFiles/chat.dir/Logger.cc.o" \
 "CMakeFiles/chat.dir/Poller.cc.o" \
 "CMakeFiles/chat.dir/TcpServer.cc.o" \
+"CMakeFiles/chat.dir/Thread.cc.o" \
 "CMakeFiles/chat.dir/TimeStamp.cc.o" \
 "CMakeFiles/chat.dir/muduo_server.cc.o" \
 "CMakeFiles/chat.dir/newDefaultPoller.cc.o"
@@ -248,12 +263,13 @@ chat_EXTERNAL_OBJECTS =
 /home/yang/00_Code/Chat/lib/libchat.so: CMakeFiles/chat.dir/Logger.cc.o
 /home/yang/00_Code/Chat/lib/libchat.so: CMakeFiles/chat.dir/Poller.cc.o
 /home/yang/00_Code/Chat/lib/libchat.so: CMakeFiles/chat.dir/TcpServer.cc.o
+/home/yang/00_Code/Chat/lib/libchat.so: CMakeFiles/chat.dir/Thread.cc.o
 /home/yang/00_Code/Chat/lib/libchat.so: CMakeFiles/chat.dir/TimeStamp.cc.o
 /home/yang/00_Code/Chat/lib/libchat.so: CMakeFiles/chat.dir/muduo_server.cc.o
 /home/yang/00_Code/Chat/lib/libchat.so: CMakeFiles/chat.dir/newDefaultPoller.cc.o
 /home/yang/00_Code/Chat/lib/libchat.so: CMakeFiles/chat.dir/build.make
 /home/yang/00_Code/Chat/lib/libchat.so: CMakeFiles/chat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library /home/yang/00_Code/Chat/lib/libchat.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library /home/yang/00_Code/Chat/lib/libchat.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chat.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

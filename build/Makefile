@@ -347,6 +347,30 @@ TcpServer.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/TcpServer.cc.s
 .PHONY : TcpServer.cc.s
 
+Thread.o: Thread.cc.o
+.PHONY : Thread.o
+
+# target to build an object file
+Thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/Thread.cc.o
+.PHONY : Thread.cc.o
+
+Thread.i: Thread.cc.i
+.PHONY : Thread.i
+
+# target to preprocess a source file
+Thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/Thread.cc.i
+.PHONY : Thread.cc.i
+
+Thread.s: Thread.cc.s
+.PHONY : Thread.s
+
+# target to generate assembly for a file
+Thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/Thread.cc.s
+.PHONY : Thread.cc.s
+
 TimeStamp.o: TimeStamp.cc.o
 .PHONY : TimeStamp.o
 
@@ -502,6 +526,9 @@ help:
 	@echo "... TcpServer.o"
 	@echo "... TcpServer.i"
 	@echo "... TcpServer.s"
+	@echo "... Thread.o"
+	@echo "... Thread.i"
+	@echo "... Thread.s"
 	@echo "... TimeStamp.o"
 	@echo "... TimeStamp.i"
 	@echo "... TimeStamp.s"
