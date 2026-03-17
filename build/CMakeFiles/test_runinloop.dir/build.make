@@ -73,15 +73,15 @@ CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o: CMakeFiles/test_runi
 CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o: /home/yang/00_Code/Chat/examples/test_runinloop.cc
 CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o: CMakeFiles/test_runinloop.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/00_Code/Chat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o -MF CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o.d -o CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o -c /home/yang/00_Code/Chat/examples/test_runinloop.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o -MF CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o.d -o CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o -c /home/yang/00_Code/Chat/examples/test_runinloop.cc
 
 CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/examples/test_runinloop.cc > CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/00_Code/Chat/examples/test_runinloop.cc > CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.i
 
 CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/examples/test_runinloop.cc -o CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/00_Code/Chat/examples/test_runinloop.cc -o CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.s
 
 # Object files for target test_runinloop
 test_runinloop_OBJECTS = \

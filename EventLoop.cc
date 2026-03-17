@@ -131,7 +131,7 @@ void EventLoop::wakeup()
     ssize_t n = ::write(wakeupFd_, &one, sizeof one);
     if (n != sizeof one)
     {
-        LOG_ERROR("EventLoop::wakeup() writes %d bytes instead of 8", n);
+        LOG_ERROR("EventLoop::wakeup() writes %zd bytes instead of 8", n);
     }
 }
 
@@ -159,7 +159,7 @@ void EventLoop::handleRead()
     ssize_t n = ::read(wakeupFd_, &one, sizeof one);
     if (n != sizeof one)
     {
-        LOG_ERROR("EventLoop::handleRead() reads %d bytes instead of 8", n);
+        LOG_ERROR("EventLoop::handleRead() reads %zd bytes instead of 8", n);
     }
 }
 

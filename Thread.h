@@ -1,32 +1,37 @@
-#pragma
+#pragma once
 
-#include "nocopybale.h"
+#include "noncopyable.h"
+
+#include <atomic>
 #include <functional>
+#include <memory>
+#include <string>
+#include <thread>
 
+#include <sys/types.h> // pid_t
 
-class Thread
+class Thread : noncopyable
 {
-public: 
-    using ThreadFunc = std::function<void ()>;
+public:
+    using ThreadFunc = std::function<void()>;
 
-    explicit Thread(ThreadFunc, const string & name = string());
-
+    explicit Thread(ThreadFunc func, const std::string& name = std::string());
     ~Thread();
 
     void start();
     void join();
 
-    bool started() const { return stared_; }
-    pit_t tid() const { return tid_; }
-    const string &name () const { return name_; }
-private:
+    bool started() const { return started_; }
+    pid_t tid() const { return tid_; }
+    const std::string& name() const { return name_; }
 
+private:
     void setDefaultName();
-    
-    bool started_;
-    bool joined_;
-    std::shared_ptr<thread> thread_;
-    pid_t tid_;
+
+    bool started_{false};
+    bool joined_{false};
+    std::shared_ptr<std::thread> thread_;
+    pid_t tid_{0};
     ThreadFunc func_;
     std::string name_;
 
