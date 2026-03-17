@@ -1,1 +1,1 @@
-/usr/bin/g++  -g -std=c++11 -fPIC CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o -o test_runinloop  -Wl,-rpath,/home/yang/00_Code/Chat/lib /home/yang/00_Code/Chat/lib/libchat.so -lpthread
+/usr/bin/g++  -g -std=c++11 -fPIC -g CMakeFiles/test_runinloop.dir/examples/test_runinloop.cc.o -o test_runinloop  -Wl,-rpath,/home/yang/00_Code/Chat/lib /home/yang/00_Code/Chat/lib/libchat.so -lpthread
