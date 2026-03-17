@@ -1,5 +1,0 @@
-/home/yang/00_Code/Chat/build/CMakeFiles/chat.dir
-/home/yang/00_Code/Chat/build/CMakeFiles/test_eventloop.dir
-/home/yang/00_Code/Chat/build/CMakeFiles/test_runinloop.dir
-/home/yang/00_Code/Chat/build/CMakeFiles/edit_cache.dir
-/home/yang/00_Code/Chat/build/CMakeFiles/rebuild_cache.dir

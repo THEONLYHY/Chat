@@ -1,1 +1,0 @@
-/usr/bin/g++  -g -std=c++11 -fPIC -g CMakeFiles/test_eventloop.dir/examples/test_eventloop.cc.o -o test_eventloop  -Wl,-rpath,/home/yang/00_Code/Chat/lib /home/yang/00_Code/Chat/lib/libchat.so -lpthread
