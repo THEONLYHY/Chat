@@ -42,9 +42,13 @@ EventLoop::EventLoop()
         t_loopInThisThread = this;
     }
 
-
-    wakeupChannel_->setReadCallback(std::bind(&EventLoop::handleRead, this));
-
+    //std::bind 可以忽略多余参数，因此可以将无参成员函数适配为接受参数的回调接口。所以省略了TimeStamp.
+    //但 lambda 是强类型的，必须显式匹配函数签名，所以需要写成 [this](TimeStamp) 的形式。
+    
+    //wakeupChannel_->setReadCallback(std::bind(&EventLoop::handleRead, this));
+    wakeupChannel_->setReadCallback([this](TimeStamp){
+        handleRead();
+    });
     wakeupChannel_->enableReading();
 }
 
