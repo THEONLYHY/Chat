@@ -28,7 +28,10 @@ Acceptor::Acceptor(EventLoop *loop, const InetAddress &listenAddr, bool reusepor
     acceptSocket_.setReusePort(reuseport);
     acceptSocket_.bindAddress(listenAddr);
     // TcpServer::start() Acceptor.listen 有新用户的连接，执行一个回调 (connfd => channel => subloop)
-    acceptChannel_.setReadCallback(std::bind(&Acceptor::handleRead, this));
+    //acceptChannel_.setReadCallback(std::bind(&Acceptor::handleRead, this));
+     acceptChannel_.setReadCallback([this](TimeStamp){
+        handleRead();
+    });
 }
 
 Acceptor::~Acceptor()
