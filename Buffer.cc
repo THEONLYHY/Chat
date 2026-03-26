@@ -1,6 +1,7 @@
 #include "Buffer.h"
 
 #include <sys/uio.h> //readv
+#include <unistd.h> // write
 
 /**
  * struct iovec {
@@ -41,6 +42,17 @@ ssize_t Buffer::readFd(int fd, int *saveErrno)
         // 原来的写满了
         writerIndex_ = buffer_.size();
         append(extrabuf, n - writable);
+    }
+    return n;
+}
+
+
+ssize_t Buffer::writeFd(int fd, int *saveErrno)
+{
+    ssize_t n = ::write(fd, peek(), readableBytes());
+    if ( n < 0)
+    {
+        *saveErrno = errno;
     }
     return n;
 }
