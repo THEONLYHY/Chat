@@ -18,15 +18,12 @@ void EventLoopThreadPool::start(const ThreadInitCallback& cb)
 
     for (int i = 0; i < numThreads_; ++i)
     {
-<<<<<<< HEAD
-=======
         /**
         char buf[name_.size() + 32];
         snprint(buf, sizeof buf, "%s%d", name.c_str(), i);
         EventLoopThread* t = new EventLoopThread(cb, buf);
         threads_.push_back(std::unique_ptr<EventLoopThread>(t));
          */
->>>>>>> main
         std::string threadName = name_ + std::to_string(i);
         std::unique_ptr<EventLoopThread> t(new EventLoopThread(cb, threadName));
         loops_.push_back(t->startLoop());

@@ -34,14 +34,11 @@ public:
 
     bool connected() const { return state_ == kConnected; }
 
-<<<<<<< HEAD
-=======
     //发送数据
     void send(const std::string &buf);
     // 关闭连接
     void shutdown();
 
->>>>>>> main
     void setMessageCallback(const MessageCallback& cb) 
     { messageCallback_ = cb; }
 
@@ -67,17 +64,11 @@ private:
     void handleClose();
     void handleError();
     
-<<<<<<< HEAD
-    void sendInLoop(const void *message, size_t len);
-    void shutdownInLoop();
-
-=======
     
     void sendInLoop(const void *data, size_t len);
     void shutdownInLoop();
 
 
->>>>>>> main
     EventLoop *loop_; // 不是baseLoop， subloop
     const std::string name_;
     std::atomic_int state_;

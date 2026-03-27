@@ -18,11 +18,8 @@ Channel::~Channel()
 }
 
 //? channel的tie方法什么时候调用过
-<<<<<<< HEAD
-=======
 // 一个TcpConnection新连接创建的时候 绑定当前的TcpConnection这个对象。
 // 防止TcpConnection对象没了
->>>>>>> main
 void Channel::tie(const std::shared_ptr<void> & obj)
 {
     tie_ = obj;

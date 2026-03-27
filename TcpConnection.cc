@@ -20,14 +20,14 @@ TcpConnection::TcpConnection(EventLoop *loop,
                              int sockfd,
                              const InetAddress &localAddr,
                              const InetAddress &peerAddr)
-    : loop_(CheckLoopNotNull(loop)), 
-    name_(nameArg), 
-    state_(kConnecting), 
-    reading_(true), 
-    socket_(new Socket(sockfd)), 
-    channel_(new Channel(loop, sockfd)), 
-    localAddr_(localAddr), peerAddr_(peerAddr), 
-    highWaterMark_(64 * 1024 * 1024) // 64M
+    : loop_(CheckLoopNotNull(loop)),
+      name_(nameArg),
+      state_(kConnecting),
+      reading_(true),
+      socket_(new Socket(sockfd)),
+      channel_(new Channel(loop, sockfd)),
+      localAddr_(localAddr), peerAddr_(peerAddr),
+      highWaterMark_(64 * 1024 * 1024) // 64M
 {
     channel_->setReadCallback([this](TimeStamp ts){
             handleRead(ts);
@@ -65,12 +65,6 @@ void TcpConnection::send(const std::string &buf)
             //loop_->runInLoop(std::bind(TcpConnection::sendInLoop, this, buf.c_str(), buf.size()));
             // buf如果被销毁的话，buf.c_str() 就不安全，所以要用值捕获来避免引用悬空。
             //在异步/跨线程回调中，绝不能依赖外部对象的生命周期
-<<<<<<< HEAD
-            loop_->runInLoop([this, msg = buf](){
-                sendInLoop(msg.c_str(), msg.size());    
-            });
-        }
-=======
             // 直接在lambda里面用buf初始化(init-capture)。需要c++14标准
             std::string msg(buf);
             loop_->runInLoop([this, msg](){
@@ -132,17 +126,11 @@ void TcpConnection::sendInLoop(const void *data, size_t len)
         if (!channel_->isWriting()){
             channel_->enableWriting(); //注册channel写事件，否则poller不会给channel通知epollout
         }
->>>>>>> main
     }
 }
 
 void TcpConnection::shutdown()
 {
-<<<<<<< HEAD
-
-}
-void TcpConnection::handleRead(TimeStamp receiveTime)
-=======
     if (state_ == kConnected){
         setState(kDisconnecting);
         loop_->runInLoop([this](){ shutdownInLoop(); });
@@ -181,7 +169,6 @@ void TcpConnection::connectDestroyed()
 }
 
         void TcpConnection::handleRead(TimeStamp receiveTime)
->>>>>>> main
 {
     int savedErrno = 0;
     ssize_t n = inputBuffer_.readFd(channel_->fd(), &savedErrno);
@@ -211,15 +198,10 @@ void TcpConnection::handleWrite()
         if (n > 0)
         {
             outputBuffer_.retrieve(n);
-<<<<<<< HEAD
-            if (outputBuffer_.readableBytes() == 0)
-            {
-=======
             //缓冲区无可读空间
             if (outputBuffer_.readableBytes() == 0)
             {
                 // 要关闭监听 
->>>>>>> main
                 channel_->disableWriting();
                 if (writeCompleteCallback_)
                 {
@@ -271,15 +253,3 @@ void TcpConnection::handleError()
     LOG_ERROR("TcpConnection::handleError name:%s - SO_ERROR:%d \n", name_.c_str(), err);
 }
 
-<<<<<<< HEAD
-void TcpConnection::sendInLoop(const void *message, size_t len)
-{
-
-}
-
-void TcpConnection::shutdownInLoop()
-{
-
-}
-=======
->>>>>>> main
