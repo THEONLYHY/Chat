@@ -12,9 +12,19 @@ void Logger::setLogLevel(int level)
 {
     logLevel_= level;
 }
+
+void Logger::setQuiet(bool quiet)
+{
+    quiet_ = quiet;
+}
 //  写日志
 void Logger::log(std::string msg)
 {
+    if (quiet_ && logLevel_ == INFO)
+    {
+        return;
+    }
+
     switch (logLevel_)
     {
     case INFO:

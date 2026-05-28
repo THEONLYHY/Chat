@@ -24,6 +24,7 @@ test_*
 # CMake / 构建目录（不提交生成物）
 # ------------------------------
 build/
+build-*/
 cmake-build-*/
 CMakeCache.txt
 CMakeFiles/

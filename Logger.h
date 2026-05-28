@@ -66,9 +66,11 @@ public:
     static Logger& instance();
     // 设置日志的级别
     void setLogLevel(int level);
+    void setQuiet(bool quiet);
     //  写日志
     void log(std::string msg);
 private:
     int logLevel_;
-    Logger(){}
+    bool quiet_;
+    Logger() : logLevel_(INFO), quiet_(false) {}
 };

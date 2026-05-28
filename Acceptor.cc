@@ -2,9 +2,10 @@
 #include "Logger.h"
 #include "InetAddress.h"
 
-#include <sys/types.h>
-#include <sys/socket.h>
 #include <errno.h>
+#include <fcntl.h>
+#include <sys/socket.h>
+#include <sys/types.h>
 #include <unistd.h>
 
 static int createNonblocking()
@@ -22,14 +23,17 @@ Acceptor::Acceptor(EventLoop *loop, const InetAddress &listenAddr, bool reusepor
     , acceptSocket_(createNonblocking())
     , acceptChannel_(loop, acceptSocket_.fd())
     , listenning_(false)
-    , idleFd_(-1)
+    , idleFd_(::open("/dev/null", O_RDONLY | O_CLOEXEC))
 {
+    if (idleFd_ < 0)
+    {
+        LOG_FATAL("%s:%s:%d open /dev/null err:%d \n ", __FILE__, __FUNCTION__, __LINE__, errno);
+    }
+
     acceptSocket_.setReuseAddr(true);
     acceptSocket_.setReusePort(reuseport);
     acceptSocket_.bindAddress(listenAddr);
-    // TcpServer::start() Acceptor.listen 有新用户的连接，执行一个回调 (connfd => channel => subloop)
-    //acceptChannel_.setReadCallback(std::bind(&Acceptor::handleRead, this));
-     acceptChannel_.setReadCallback([this](TimeStamp){
+    acceptChannel_.setReadCallback([this](TimeStamp) {
         handleRead();
     });
 }
@@ -38,41 +42,69 @@ Acceptor::~Acceptor()
 {
     acceptChannel_.disableAll();
     acceptChannel_.remove();
+    if (idleFd_ >= 0)
+    {
+        ::close(idleFd_);
+    }
+}
 
+void Acceptor::setListenBacklog(int backlog)
+{
+    acceptSocket_.setListenBacklog(backlog);
 }
 
 void Acceptor::listen()
 {
     listenning_ = true;
-    acceptSocket_.listen(); // listen
+    acceptSocket_.listen();
     acceptChannel_.enableReading();
 }
 
-
-
 void Acceptor::handleRead()
 {
-    InetAddress peerAddr;
-    int connfd = acceptSocket_.accept(&peerAddr);
-    if (connfd >= 0)
+    while (true)
     {
-        if (newConnectionCallback_)
+        InetAddress peerAddr;
+        int connfd = acceptSocket_.accept(&peerAddr);
+        if (connfd >= 0)
         {
-            //轮询找到subloop，唤醒， 分发当前的新客户端的Channel
-            newConnectionCallback_(connfd, peerAddr);
+            if (newConnectionCallback_)
+            {
+                newConnectionCallback_(connfd, peerAddr);
+            }
+            else
+            {
+                ::close(connfd);
+            }
+            continue;
         }
-        else
+
+        int savedErrno = errno;
+        if (savedErrno == EAGAIN || savedErrno == EWOULDBLOCK)
         {
-            ::close(connfd);
+            break;
         }
-    }
-    else
-    {
-        LOG_ERROR("%s:%s:%d accept err:%d \n ", __FILE__, __FUNCTION__, __LINE__, errno);
-        //超上限了。1.调整上限
-        if (errno == EMFILE)
+        if (savedErrno == EINTR || savedErrno == ECONNABORTED)
         {
-            LOG_ERROR("%s:%s:%d  socket reached limit err:%d \n ", __FILE__, __FUNCTION__, __LINE__, errno);
+            continue;
         }
+
+        LOG_ERROR("%s:%s:%d accept err:%d \n ", __FILE__, __FUNCTION__, __LINE__, savedErrno);
+        if (savedErrno == EMFILE)
+        {
+            LOG_ERROR("%s:%s:%d socket reached limit err:%d \n ", __FILE__, __FUNCTION__, __LINE__, savedErrno);
+            ::close(idleFd_);
+            idleFd_ = ::accept(acceptSocket_.fd(), nullptr, nullptr);
+            if (idleFd_ >= 0)
+            {
+                ::close(idleFd_);
+            }
+            idleFd_ = ::open("/dev/null", O_RDONLY | O_CLOEXEC);
+            if (idleFd_ < 0)
+            {
+                LOG_ERROR("%s:%s:%d reopen /dev/null err:%d \n ", __FILE__, __FUNCTION__, __LINE__, errno);
+            }
+        }
+        break;
     }
 }

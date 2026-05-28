@@ -1,3 +1,7 @@
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+
 #include "Socket.h"
 #include "InetAddress.h"
 #include "Logger.h"
@@ -24,9 +28,17 @@ void Socket::bindAddress(const InetAddress &localaddr)
 
 void Socket::listen()
 {
-    if (0 != ::listen(sockfd_, 1024))
+    if (0 != ::listen(sockfd_, listenBacklog_))
     {
         LOG_FATAL("listen sockfd:%d fail \n", sockfd_);
+    }
+}
+
+void Socket::setListenBacklog(int backlog)
+{
+    if (backlog > 0)
+    {
+        listenBacklog_ = backlog;
     }
 }
 
@@ -34,9 +46,9 @@ void Socket::listen()
 int Socket::accept(InetAddress *peeraddr)
 {
     sockaddr_in addr;
-    socklen_t len;
+    socklen_t len = sizeof addr;
     bzero(&addr, sizeof addr);
-    int connfd = ::accept(sockfd_, (sockaddr*)&addr, &len);
+    int connfd = ::accept4(sockfd_, (sockaddr*)&addr, &len, SOCK_NONBLOCK | SOCK_CLOEXEC);
     if (connfd >= 0){
         peeraddr->setSockAddr(addr);
     }

@@ -5,7 +5,7 @@
 #include <sys/epoll.h>
 
 const int Channel::kNoneEvent = 0;
-const int Channel::kReadEvent = EPOLLIN | EPOLLPRI;
+const int Channel::kReadEvent = EPOLLIN | EPOLLPRI | EPOLLRDHUP;
 const int Channel::kWriteEvent = EPOLLOUT;
 
 Channel::Channel(EventLoop *loop, int fd)
@@ -61,17 +61,29 @@ void Channel::handleEvent(TimeStamp receiveTime)
 void Channel::handleEventwithGuard(TimeStamp receiveTime)
 {
 
-    LOG_INFO("channel handleEvent revents: %d\n", revents_);
-    if((revents_ & EPOLLHUP) && !(revents_ & EPOLLIN))
+    LOG_DEBUG("channel handleEvent revents: %d\n", revents_);
+    bool hasReadEvent = revents_ & (EPOLLIN | EPOLLPRI);
+    bool hasWriteEvent = revents_ & EPOLLOUT;
+
+    if((revents_ & EPOLLHUP) && !hasReadEvent)
     {
         if(closeCallback_){
             closeCallback_();
         }
+        return;
     }
 
     if(revents_ & EPOLLERR){
         if(errorCallback_){
             errorCallback_();
+        }
+        if (!hasReadEvent && !hasWriteEvent)
+        {
+            if (closeCallback_)
+            {
+                closeCallback_();
+            }
+            return;
         }
     }
     
@@ -79,6 +91,13 @@ void Channel::handleEventwithGuard(TimeStamp receiveTime)
         if(readCallback_){
             readCallback_(receiveTime);
         }
+    }
+
+    if(revents_ & EPOLLRDHUP){
+        if(closeCallback_){
+            closeCallback_();
+        }
+        return;
     }
 
     if(revents_ & EPOLLOUT){

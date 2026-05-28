@@ -22,6 +22,7 @@ public:
         newConnectionCallback_ = std::move(cb);
     }
 
+    void setListenBacklog(int backlog);
     void listen();
     bool listenning() const { return listenning_; }
 private:

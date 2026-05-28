@@ -11,6 +11,7 @@
 #include <string>
 #include <memory>
 #include <unordered_map>
+#include <atomic>
 
 class TcpServer : noncopyable
 {
@@ -35,6 +36,7 @@ public:
 
     //设置底层subloop的数量
     void setThreadNum(int numThreads);
+    void setListenBacklog(int backlog);
 
     //开启服务器监听
     void start();
@@ -62,4 +64,5 @@ private:
     std::atomic_int started_;
 
     int nextConnId_;
+    ConnectionMap connections_;
 };

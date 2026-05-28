@@ -38,9 +38,16 @@ public:
     void send(const std::string &buf);
     // 关闭连接
     void shutdown();
+    void forceClose();
+    void setTcpNoDelay(bool on);
+    void setMaxOutputBufferBytes(size_t bytes) { maxOutputBufferBytes_ = bytes; }
+    size_t outputBufferBytes() const { return outputBuffer_.readableBytes(); }
 
     void setMessageCallback(const MessageCallback& cb) 
     { messageCallback_ = cb; }
+
+    void setConnectionCallback(const ConnectionCallback& cb)
+    { connectionCallback_ = cb; }
 
     void setWriteCompleteCallback(const WriteCompleteCallback& cb)
     { writeCompleteCallback_ = cb; }
@@ -67,6 +74,7 @@ private:
     
     void sendInLoop(const void *data, size_t len);
     void shutdownInLoop();
+    void forceCloseInLoop();
 
 
     EventLoop *loop_; // 不是baseLoop， subloop
@@ -85,7 +93,8 @@ private:
     WriteCompleteCallback writeCompleteCallback_;  // 消息发送完成以后的回调
     HighWaterMarkCallback highWaterMarkCallback_;
     CloseCallback closeCallback_;
-    size_t highWaterMark_; 
+    size_t highWaterMark_;
+    size_t maxOutputBufferBytes_;
     
     Buffer inputBuffer_;
     Buffer outputBuffer_;
